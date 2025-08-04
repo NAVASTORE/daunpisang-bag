@@ -3,329 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tas Selempang Daun Pisang - Navaofficial</title>
+    <title>Tas Motif Daun Pisang – Nava Bag</title>
+    <meta name="description" content="Tas motif daun pisang eksklusif, handmade, aman untuk kulit bayi, kualitas premium.">
+    <meta name="keywords" content="Tas motif daun pisang, Nava Bag, tas handmade, tas premium">
+    <meta property="og:title" content="Tas Motif Daun Pisang – Nava Bag">
+    <meta property="og:description" content="Desain eksklusif, jahitan handmade, bahan premium, aman untuk kulit bayi.">
+    <meta property="og:image" content="https://down-id.img.susercontent.com/file/sg-11134201-22110-f04bm0ec6qjva8.webp">
+    <meta property="og:type" content="product">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; }
-        .leaf-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2366bb6a' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .bounce-once {
-            animation: bounceOnce 0.5s ease-out;
-        }
-        @keyframes bounceOnce {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        .custom-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .hover-lift {
-            transition: transform 0.3s ease;
-        }
-        .hover-lift:hover {
-            transform: translateY(-5px);
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <i data-lucide="shopping-bag" class="h-8 w-8 text-green-600"></i>
-                    <span class="ml-2 text-xl font-bold text-gray-800">Navaofficial</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-green-600 transition">Beranda</a>
-                    <a href="#product" class="text-gray-700 hover:text-green-600 transition">Produk</a>
-                    <a href="#reviews" class="text-gray-700 hover:text-green-600 transition">Ulasan</a>
-                    <a href="#contact" class="text-gray-700 hover:text-green-600 transition">Kontak</a>
-                </div>
-                <button class="md:hidden" id="mobile-menu-btn">
-                    <i data-lucide="menu" class="h-6 w-6"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- Hero Section -->
-    <section id="home" class="relative overflow-hidden leaf-pattern">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="text-center">
-                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                    Tas Selempang <span class="text-green-600">Daun Pisang</span>
-                </h1>
-                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                    Tas ramah lingkungan dengan motif daun pisang yang unik, cocok untuk gaya hidup modern yang peduli lingkungan
-                </p>
-                <button id="cta-btn" class="bg-green-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-700 transition duration-300 hover-lift">
-                    Lihat Produk
+    <!-- HERO -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-800 to-emerald-600 text-white">
+        <div class="absolute inset-0 z-0">
+            <img id="hero-img" class="w-full h-full object-cover" src="https://down-id.img.susercontent.com/file/sg-11134201-22110-f04bm0ec6qjva8.webp" alt="Tas motif daun pisang">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <div class="relative z-10 text-center max-w-3xl px-4">
+            <h1 class="font-playfair text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+                Tas Motif Daun Pisang
+            </h1>
+            <p class="text-base md:text-lg mb-6">
+                Desain eksklusif daun pisang – beda dari yang lain. Jahitan handmade, bahan premium, aman untuk kulit bayi.
+            </p>
+
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 inline-block">
+                <div class="line-through text-gray-300 text-xl">Rp 240.000</div>
+                <div class="text-4xl font-bold text-yellow-300">Rp 167.000</div>
+            </div>
+
+            <div class="mt-8">
+                <button onclick="scrollToOrder()" class="bg-yellow-400 text-emerald-900 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition">
+                    Pesan Sekarang
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Product Section -->
-    <section id="product" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Product Images -->
-                <div class="space-y-4">
-                    <div class="bg-gray-100 rounded-2xl p-8 custom-shadow">
-                        <img id="main-image" src="https://down-id.img.susercontent.com/file/sg-11134201-22110-f04bm0ec6qjva8@resize_w450_nl.webp" 
-                             alt="Tas Selempang Daun Pisang" class="w-full h-96 object-cover rounded-xl">
-                    </div>
-                    <div class="grid grid-cols-4 gap-2">
-                        <img src="https://down-id.img.susercontent.com/file/42016f60d97d6b80fe96cc27217ec52a.webp" 
-                             class="thumbnail cursor-pointer rounded-lg hover:opacity-75 transition" data-img="1">
-                        <img src="https://down-id.img.susercontent.com/file/30c0bc4f841849a5d70bdea5e675a990.webp" 
-                             class="thumbnail cursor-pointer rounded-lg hover:opacity-75 transition" data-img="2">
-                        <img src="https://down-id.img.susercontent.com/file/81aee5c3e9108072f6a6996f4fe2be67.webp" 
-                             class="thumbnail cursor-pointer rounded-lg hover:opacity-75 transition" data-img="3">
-                        <img src="https://down-id.img.susercontent.com/file/234e79b280513575e2e60f2923d61854.webp" 
-                             class="thumbnail cursor-pointer rounded-lg hover:opacity-75 transition" data-img="4">
-                    </div>
+    <!-- GALERI -->
+    <section class="py-16">
+        <h2 class="font-playfair text-3xl text-center mb-10">Galeri Produk</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto px-4">
+            <img class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" src="https://down-id.img.susercontent.com/file/42016f60d97d6b80fe96cc27217ec52a.webp" alt="Tas 2">
+            <img class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" src="https://down-id.img.susercontent.com/file/30c0bc4f841849a5d70bdea5e675a990.webp" alt="Tas 3">
+            <img class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" src="https://down-id.img.susercontent.com/file/234e79b280513575e2e60f2923d61854.webp" alt="Tas 4">
+            <img class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition" src="https://down-id.img.susercontent.com/file/81aee5c3e9108072f6a6996f4fe2be67.webp" alt="Tas 5">
+        </div>
+    </section>
+
+    <!-- FITUR -->
+    <section class="py-16 bg-white">
+        <h2 class="font-playfair text-3xl text-center mb-10">Keunggulan Kami</h2>
+        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 px-4">
+            <div class="text-center p-6 rounded-xl shadow hover:shadow-lg transition">
+                <div class="text-emerald-600 text-4xl mb-3"><i class="fas fa-award"></i></div>
+                <h3 class="font-semibold text-lg mb-2">Kualitas Premium</h3>
+                <p class="text-gray-600">Bahan satin bridal glossy & furing satin hitam – lembut & elegan.</p>
+            </div>
+            <div class="text-center p-6 rounded-xl shadow hover:shadow-lg transition">
+                <div class="text-emerald-600 text-4xl mb-3"><i class="fas fa-hand-sparkles"></i></div>
+                <h3 class="font-semibold text-lg mb-2">100% Handmade</h3>
+                <p class="text-gray-600">Jahitan tangan selembut cinta, bukan produksi massal.</p>
+            </div>
+            <div class="text-center p-6 rounded-xl shadow hover:shadow-lg transition">
+                <div class="text-emerald-600 text-4xl mb-3"><i class="fas fa-baby"></i></div>
+                <h3 class="font-semibold text-lg mb-2">Aman untuk Bayi</h3>
+                <p class="text-gray-600">Tinta Oeko Tex 100 Class 1 – aman untuk kulit paling sensitif.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAIL PRODUK -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="font-playfair text-3xl text-center mb-8">Detail Produk</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Spesifikasi</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Ukuran: 20 × 15 × 4 cm</li>
+                        <li>Bahan luar: Satin Bridal/Duchess (shiny look)</li>
+                        <li>Furing: Satin Bridal hitam</li>
+                        <li>Tali: Nylon hitam lebar 2,5 cm</li>
+                        <li>Resleting: Kuat & aman</li>
+                    </ul>
                 </div>
-
-                <!-- Product Details -->
-                <div class="space-y-6">
-                    <h2 class="text-3xl font-bold text-gray-900">Tas Selempang Motif Daun Pisang</h2>
-                    
-                    <div class="flex items-center space-x-2">
-                        <div class="flex">
-                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
-                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
-                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
-                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
-                            <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
-                        </div>
-                        <span class="text-gray-600">(128 ulasan)</span>
-                    </div>
-
-                    <div class="space-y-2">
-                        <p class="text-3xl font-bold text-green-600">Rp 168.000</p>
-                        <p class="text-lg text-gray-500 line-through">Rp 240.000</p>
-                    </div>
-
-                    <div class="space-y-4">
-                        <h3 class="text-lg font-semibold">Deskripsi Produk</h3>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i data-lucide="leaf" class="h-5 w-5 text-green-500 mr-2 mt-0.5"></i>
-                                <span>Bahan ramah lingkungan dari serat alami</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="palette" class="h-5 w-5 text-green-500 mr-2 mt-0.5"></i>
-                                <span>Motif daun pisang tahan lama dan tidak luntur</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="package" class="h-5 w-5 text-green-500 mr-2 mt-0.5"></i>
-                                <span>Ukuran 25x20x8 cm, cukup untuk barang-barang sehari-hari</span>
-                            </li>
-                        </ul>
-                    </div>
-
-    <!-- Reviews Section -->
-    <section id="reviews" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Ulasan Pelanggan</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <div class="flex items-center mb-4">
-                        <div>
-                            <h4 class="font-semibold">Siti Nurhaliza</h4>
-                            <div class="flex">
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Tasnya sangat bagus dan unik! Bahan ramah lingkungan, cocok untuk gaya hidup sustainable saya."</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <div class="flex items-center mb-4">
-                        <div>
-                            <h4 class="font-semibold">Budi Santoso</h4>
-                            <div class="flex">
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Kualitasnya bagus sekali. Sudah pakai 3 bulan masih seperti baru. Recommended!"</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <div class="flex items-center mb-4">
-                       <div>
-                            <h4 class="font-semibold">Maya Putri</h4>
-                            <div class="flex">
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                                <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Motif daun pisangnya sangat cantik! Banyak teman yang nanya dimana beli."</p>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Muat Dengan Nyaman</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Handphone</li>
+                        <li>Dompet & kartu</li>
+                        <li>Alat tulis</li>
+                        <li>Barang harian lainnya</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-     <!-- Product Images -->
-                <div class="space-y-4">
-                    <div class="bg-gray-100 rounded-2xl p-8 custom-shadow">
-                        <img id="main-image" src="https://down-id.img.susercontent.com/file/sg-11134201-22110-j61e8j9i6qjve6.webp" 
-                             alt="Tas Selempang Daun Pisang" class="w-full h-96 object-cover rounded-xl">
 
-
-                    <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="nava" data-product-slug="tas-motif-daun-pisang" data-product-id="6890fe2e2775cdc2fd0d0dd8" id="oo-embed-form-tas-motif-daun-pisang-4823" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://nava.orderonline.id'); ooe('init', '5f119cd08dcbdb2737678706', '6890fe2e2775cdc2fd0d0dd8', '6890fe2e2775cdc2fd0d0dd9', 'oo-embed-form-tas-motif-daun-pisang-4823', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Navaofficial</h3>
-                    <p class="text-gray-400">Menyediakan produk ramah lingkungan berkualitas tinggi untuk gaya hidup modern.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Produk</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">Tas Selempang</a></li>
-                        <li><a href="#" class="hover:text-white">Dompet Wanita</a></li>
-                        <li><a href="#" class="hover:text-white">Aksesoris</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Layanan</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">Pengiriman Cepat</a></li>
-                        <li><a href="#" class="hover:text-white">Garansi Produk</a></li>
-                        <li><a href="#" class="hover:text-white">Customer Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Ikuti Kami</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i data-lucide="instagram" class="h-6 w-6"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i data-lucide="facebook" class="h-6 w-6"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i data-lucide="twitter" class="h-6 w-6"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-                <p>&copy; 2024 Navaofficial. All rights reserved.</p>
-            </div>
-        </div>
+    <!-- PEMESANAN -->
+    <section id="order" class="py-16 bg-emerald-700 text-white">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <h2 class="font-playfair text-3xl mb-6">Pesan Sekarang</h2>
+            <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="nava" data-product-slug="tas-motif-daun-pisang" data-product-id="6890fe2e2775cdc2fd0d0dd8" id="oo-embed-form-tas-motif-daun-pisang-828" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://nava.orderonline.id'); ooe('init', '5f119cd08dcbdb2737678706', '6890fe2e2775cdc2fd0d0dd8', '6890fe2e2775cdc2fd0d0dd9', 'oo-embed-form-tas-motif-daun-pisang-828', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
     </footer>
 
-    <!-- Cart Notification -->
-    <div id="cart-notification" class="fixed top-20 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg hidden">
-        <p class="flex items-center space-x-2">
-            <i data-lucide="check-circle" class="h-5 w-5"></i>
-            <span>Produk ditambahkan ke keranjang!</span>
-        </p>
-    </div>
-
     <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+        // Smooth scroll ke order
+        function scrollToOrder() {
+            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+        }
 
-        // Product image gallery
-        const thumbnails = document.querySelectorAll('.thumbnail');
-        const mainImage = document.getElementById('main-image');
-        
-        thumbnails.forEach(thumb => {
-            thumb.addEventListener('click', () => {
-                const imgNum = thumb.dataset.img;
-                mainImage.src = `https://via.placeholder.com/600x400/10b981/ffffff?text=Tas+${imgNum}`;
-                mainImage.classList.add('fade-in');
-                setTimeout(() => mainImage.classList.remove('fade-in'), 500);
-            });
-        });
-
-        // Quantity counter
-        let quantity = 1;
-        const quantityDisplay = document.getElementById('quantity');
-        
-        document.getElementById('increase').addEventListener('click', () => {
-            quantity++;
-            quantityDisplay.textContent = quantity;
-        });
-        
-        document.getElementById('decrease').addEventListener('click', () => {
-            if (quantity > 1) {
-                quantity--;
-                quantityDisplay.textContent = quantity;
-            }
-        });
-
-        // Add to cart
-        document.getElementById('add-to-cart').addEventListener('click', () => {
-            const notification = document.getElementById('cart-notification');
-            notification.classList.remove('hidden');
-            notification.classList.add('fade-in');
-            
-            setTimeout(() => {
-                notification.classList.add('hidden');
-                notification.classList.remove('fade-in');
-            }, 3000);
-            
-            // Add bounce effect to button
-            document.getElementById('add-to-cart').classList.add('bounce-once');
-            setTimeout(() => {
-                document.getElementById('add-to-cart').classList.remove('bounce-once');
-            }, 500);
-        });
-
-        // CTA button scroll
-        document.getElementById('cta-btn').addEventListener('click', () => {
-            document.getElementById('product').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            // Add mobile menu functionality here
-            alert('Mobile menu coming soon!');
+        // Animasi masuk
+        gsap.from('#hero h1, #hero p, #hero .price-box, #hero button', {
+            duration: 1,
+            y: 30,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power2.out'
         });
     </script>
 </body>
